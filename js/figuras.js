@@ -46,6 +46,6 @@ console.log(`PI is equal to: ${PI}.`);
 const perimeterCircle = parseFloat((diameterCircle * PI).toFixed(2));
 console.log(`The perimeter of the circle measures: ${perimeterCircle} cms.`);
 //Area
-const areaCircle = parseFloat((PI * radioCircle ** 2).toFixed(2));
+const areaCircle = parseFloat(Math.pow(PI * radioCircle, 2).toFixed(2));
 console.log(`The area of the circle measures: ${areaCircle} cms.`);
 console.groupEnd();
