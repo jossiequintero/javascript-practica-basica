@@ -14,10 +14,9 @@ console.groupEnd();
 //triangle Code
 console.group("Triangles");
 //Sides of the triangle
-const sideTriangle1 = 6;
-const sideTriangle2 = 6;
-const baseTriangle = 4;
-const heightTriangle = 5;
+const [sideTriangle1, sideTriangle2, baseTriangle, heightTriangle] = [
+    6, 6, 4, 5,
+];
 console.log(
     `The sides of the triangle measures: ${sideTriangle1} cms,${sideTriangle2} cms, ${baseTriangle}
     cms.`
