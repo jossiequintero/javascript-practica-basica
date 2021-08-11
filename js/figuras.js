@@ -10,3 +10,23 @@ console.log(`The perimeter of the square measures: ${perimeterSquare} cm`);
 const areaSquare = squareSide * squareSide;
 console.log(`The area of the square measures: ${areaSquare} cm^2`);
 console.groupEnd();
+
+//triangle Code
+console.group("Triangles");
+//Sides of the triangle
+const sideTriangle1 = 6;
+const sideTriangle2 = 6;
+const baseTriangle = 4;
+const heightTriangle = 5;
+console.log(
+    `The sides of the triangle measures: ${sideTriangle1} cms,${sideTriangle2} cms, ${baseTriangle}
+    cms.`
+);
+console.log(`The height of the triangle measures: ${heightTriangle} cms`);
+//Perimeter of the triangle
+const perimeterTriangle = sideTriangle1 + sideTriangle2 + baseTriangle;
+console.log(`The perimeter of the triangle measures: ${perimeterTriangle} cms`);
+//Area del triangle
+const areaTriangle = (baseTriangle * heightTriangle) / 2;
+console.log(`The area of the triangle measures: ${areaTriangle} cms^2`);
+console.groupEnd();
