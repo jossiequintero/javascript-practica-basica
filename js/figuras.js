@@ -30,3 +30,22 @@ console.log(`The perimeter of the triangle measures: ${perimeterTriangle} cms`);
 const areaTriangle = (baseTriangle * heightTriangle) / 2;
 console.log(`The area of the triangle measures: ${areaTriangle} cms^2`);
 console.groupEnd();
+
+//Circles Code
+console.group("Circles");
+//Radio
+const radioCircle = 4;
+console.log(`The radio of the circle measures: ${radioCircle} cms.`);
+//Diameter
+const diameterCircle = radioCircle * 2;
+console.log(`The diameter of the circle measures: ${diameterCircle} cms.`);
+// PI
+const PI = Math.PI;
+console.log(`PI is equal to: ${PI}.`);
+// Perimeter
+const perimeterCircle = diameterCircle * PI;
+console.log(`The perimeter of the circle measures: ${perimeterCircle} cms.`);
+//Area
+const areaCircle = PI * radioCircle ** 2;
+console.log(`The area of the circle measures: ${areaCircle} cms.`);
+console.groupEnd();
