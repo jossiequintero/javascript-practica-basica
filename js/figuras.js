@@ -40,7 +40,7 @@ console.log(`The radio of the circle measures: ${radioCircle} cms.`);
 const diameterCircle = radioCircle * 2;
 console.log(`The diameter of the circle measures: ${diameterCircle} cms.`);
 // PI
-const PI = Math.PI;
+const PI = parseFloat(Math.PI.toFixed(4));
 console.log(`PI is equal to: ${PI}.`);
 // Perimeter
 const perimeterCircle = diameterCircle * PI;
