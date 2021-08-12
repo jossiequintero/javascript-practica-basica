@@ -34,12 +34,12 @@ console.groupEnd();
 const calculatePerimeterSquare = () => {
     const input = document.getElementById("inputSideSquare");
     const value = input.value;
-    perimeter = perimeterSquare(value);
+    let perimeter = perimeterSquare(value);
     alert(`The perimeter is: ${perimeter} cm`);
 };
 const calculateAreaSquare = () => {
     const input = document.getElementById("inputSideSquare");
     const value = input.value;
-    area = areaSquare(value);
+    let area = areaSquare(value);
     alert(`The area is: ${area} cm`);
 };
