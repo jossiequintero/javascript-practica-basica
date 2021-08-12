@@ -10,7 +10,12 @@ console.groupEnd();
 //triangle Code
 console.group("Triangles");
 //Perimeter of the triangle
-const perimeterTriangle = (side1, side2, base) => side1 + side2 + base;
+const perimeterTriangle = (side1, side2, base) => {
+    side1 = Number(side1);
+    side2 = Number(side2);
+    base = Number(base);
+    return side1 + side2 + base;
+};
 
 //Area del triangle
 const areaTriangle = (base, height) => (base * height) / 2;
@@ -42,4 +47,17 @@ const calculateAreaSquare = () => {
     const value = input.value;
     let area = areaSquare(value);
     alert(`The area is: ${area} cm`);
+};
+const calculatePerimeterTriangle = () => {
+    const side1 = document.getElementById("inputSideTriangle1").value;
+    const side2 = document.getElementById("inputSideTriangle2").value;
+    const base = document.getElementById("inputBaseTriangle").value;
+    let perimeter = perimeterTriangle(side1, side2, base);
+    alert(`The perimeter is: ${perimeter}`);
+};
+const calculateAreaTriangle = () => {
+    const base = document.getElementById("inputBaseTriangle2");
+    const height = document.getElementById("inputHeightTriangle");
+    let area = areaTriangle(base.value, height.value);
+    alert(`The area of the triangle is: ${area}`);
 };
