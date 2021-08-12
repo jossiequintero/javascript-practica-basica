@@ -30,3 +30,16 @@ const perimeterCircle = (radio) => {
 //Area
 const areaCircle = (radio) => parseFloat(Math.pow(PI * radio, 2).toFixed(2));
 console.groupEnd();
+
+const calculatePerimeterSquare = () => {
+    const input = document.getElementById("inputSideSquare");
+    const value = input.value;
+    perimeter = perimeterSquare(value);
+    alert(`The perimeter is: ${perimeter} cm`);
+};
+const calculateAreaSquare = () => {
+    const input = document.getElementById("inputSideSquare");
+    const value = input.value;
+    area = areaSquare(value);
+    alert(`The area is: ${area} cm`);
+};
