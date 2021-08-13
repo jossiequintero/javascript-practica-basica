@@ -21,6 +21,15 @@ const perimeterTriangle = (side1, side2, base) => {
 const areaTriangle = (base, height) => (base * height) / 2;
 console.groupEnd();
 
+//Height of a isosceles triangle
+const heightIsoTriangle = (sideA, sideB, base) => {
+    if (sideA != sideB) {
+        return "The sides are not equals";
+    } else {
+        return Math.sqrt(sideA ** 2 - base ** 2 / 4).toFixed(2);
+    }
+};
+
 //Circles Code
 console.group("Circles");
 //Diameter
@@ -78,4 +87,11 @@ const calculateAreaCircle = () => {
     const value = radio.value;
     let area = areaCircle(value);
     alert(`The area is: ${area}`);
+};
+const calculateHeightIsoTriangle = () => {
+    const sideA = document.getElementById("inputSideIsoTriangleA");
+    const sideB = document.getElementById("inputSideIsoTriangleB");
+    const base = document.getElementById("inputBaseIsoTriangle");
+    let height = heightIsoTriangle(sideA.value, sideB.value, base.value);
+    alert(height);
 };
