@@ -1,12 +1,11 @@
-const originalPrice = 100;
-const discountPercentage = 15;
-const discountPrice =
-    originalPrice - (discountPercentage * originalPrice) / 100;
-const priceWithDiscount = originalPrice - discountPrice;
-
-console.log({
-    originalPrice,
-    discountPercentage,
-    discountPrice,
-    priceWithDiscount,
-});
+const calculatePriceWithDiscount = (price, discountP) => {
+    const discountPrice = (discountP * price) / 100;
+    const priceWithDiscount = price - discountPrice;
+    console.log({
+        price,
+        discountP,
+        discountPrice,
+        priceWithDiscount,
+    });
+    return priceWithDiscount;
+};
