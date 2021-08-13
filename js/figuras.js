@@ -61,3 +61,21 @@ const calculateAreaTriangle = () => {
     let area = areaTriangle(base.value, height.value);
     alert(`The area of the triangle is: ${area}`);
 };
+const calculateDiameterCircle = () => {
+    const radio = document.getElementById("inputRadioCircle");
+    const value = radio.value;
+    let diameter = diameterCircle(value);
+    alert(`The diameter is: ${diameter}`);
+};
+const calculatePerimeterCircle = () => {
+    const radio = document.getElementById("inputRadioCircle2");
+    const value = radio.value;
+    let perimeter = perimeterCircle(value);
+    alert(`The perimeter is: ${perimeter}`);
+};
+const calculateAreaCircle = () => {
+    const radio = document.getElementById("inputRadioCircle3");
+    const value = radio.value;
+    let area = areaCircle(value);
+    alert(`The area is: ${area}`);
+};
