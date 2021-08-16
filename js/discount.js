@@ -9,3 +9,10 @@ const calculatePriceWithDiscount = (price, discountP) => {
     });
     return priceWithDiscount;
 };
+
+const calculatePriceDiscount = () => {
+    const price = inputPrice.value;
+    const discount = inputDiscount.value;
+    const result = calculatePriceWithDiscount(price, discount);
+    resultPrice.textContent = `The result is: ${result}`;
+};

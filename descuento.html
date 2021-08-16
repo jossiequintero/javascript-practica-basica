@@ -10,7 +10,18 @@
 
 <body>
     <h1>Calculate discount</h1>
-    <script src="./js/discount.js"></script>
+    <p>Calculator of the final price with discount</p>
+    <form action="">
+        <label for="inputPrice">Write the product price</label>
+        <input id="inputPrice" type="number" />
+        <label for="inputDiscount"></label>
+        <input id="inputDiscount" type="number" />
+        <button id="calcularPriceBtn" type="button" onclick="calculatePriceDiscount()">
+				Calculate
+			</button>
+    </form>
+    <p id="resultPrice"></p>
+    <script src="./js/discount.js "></script>
 </body>
 
 </html>
