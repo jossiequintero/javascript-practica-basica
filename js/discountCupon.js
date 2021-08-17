@@ -1,5 +1,17 @@
-//Solución #2: legibilidad, error first y muerte al switch
-const coupons = ["cupon_1", "cupon_2", "cupon_3", "cupon_4"];
+// Solución #3: arrays y condicionales mucho más inteligentes
+const coupons = [{
+        name: "cupon_1",
+        discount: 10,
+    },
+    {
+        name: "cupon_2",
+        discount: 20,
+    },
+    {
+        name: "cupon_3",
+        discount: 30,
+    },
+];
 const calculatePriceWithDiscount = (price, discountP) => {
     const discountPrice = (discountP * price) / 100;
     const priceWithDiscount = price - discountPrice;
@@ -13,17 +25,15 @@ const calculatePriceWithDiscount = (price, discountP) => {
 };
 const onClickBtnPriceDiscount = () => {
     const price = inputPrice.value;
-    const coupon = inputCoupon.value;
+    const couponValue = inputCoupon.value;
     let discount;
-    if (!coupons.includes(coupon)) {
-        alert(`The coupon ${coupon} is invalid!!`);
-    } else if (coupon === "cupon_1") {
-        discount = 10;
-    } else if (coupon === "cupon_2") {
-        discount = 20;
-    } else if (coupon === "cupon_3") {
-        discount = 30;
+    const validCoupon = coupons.find((coupon) => coupon.name === couponValue);
+    if (!validCoupon) {
+        alert(`The coupon ${couponValue} is invalid`);
+        console.log(validCoupon);
+    } else {
+        discount = validCoupon.discount;
+        const result = calculatePriceWithDiscount(price, discount);
+        resultP.innerText = `The result is: $${result}`;
     }
-    const result = calculatePriceWithDiscount(price, discount);
-    resultP.innerText = `The result is: $${result}`;
 };
