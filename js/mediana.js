@@ -1,8 +1,8 @@
 const getMedian = (listNumber = []) => {
     listNumber.sort((a, b) => a - b);
-    const lenght = listNumber.length;
-    const middleList = lenght / 2;
-    const IsEven = lenght % 2 == 0;
+    const length = listNumber.length;
+    const middleList = length / 2;
+    const IsEven = length % 2 == 0;
     let median;
     if (IsEven) {
         let firstValue = listNumber[middleList - 1];
