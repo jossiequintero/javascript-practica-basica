@@ -9,7 +9,9 @@ const getModa = (list) => {
     });
     const listCountArray = Object.entries(listCount);
     listCountArray.sort((a, b) => a[1] - b[1]);
-    return listCountArray.pop();
+    const lastModa = listCountArray[listCountArray.length - 1];
+    const moda = listCountArray.filter((element) => element[1] === lastModa[1]);
+    return moda;
 };
 const onClickAddElement = () => {
     const inputElement = document.getElementById("inputElement");
@@ -21,5 +23,14 @@ const onClickAddElement = () => {
 
 const onClickCalculateModa = () => {
     let moda = getModa(list);
-    alert(`The element ${moda[0]} is the moda`);
+    const result = document.getElementById("result");
+    if (moda.length > 1) {
+        for (let element in moda) {
+            element = moda[element];
+            result.innerHTML += `<p>The element ${element[0]} is repeated ${element[1]} times </p>`;
+        }
+    } else {
+        console.log(moda);
+        result.textContent = `The moda is the element ${moda[0][0]} that is repeated ${moda[0][1]} times`;
+    }
 };
